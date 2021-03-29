@@ -1,11 +1,11 @@
 <template>
-    <v-card max-width="475" height="100%" class="mx-auto my-12">
+    <v-card class="mx-auto my-12">
     <v-card-title class="headline">
         {{ title }}
     </v-card-title>
     <v-img
         :lazy-src="require(`~/static/image/${image}`)"
-        :height="550"
+        :height="450"
         :src="require(`~/static/image/${image}`)"
     ></v-img>
     <v-card-text>

@@ -1,7 +1,11 @@
 <template>
-    <v-row no-gutters>
-        <Item v-for="(item, index) in itemList" :key="index" :title="item.title" :image="item.img" :info="item.info" :stock="item.stock"></Item>
-    </v-row>
+    <v-container fluid grid-list-xl>
+        <v-layout row wrap align-content-end>
+            <v-flex v-for="(item, index) in itemList" class="xs12 sm6 md4 lg3 xl2 justify-space-around" :key="index">
+                <Item :key="index" :title="item.title" :image="item.img" :info="item.info" :stock="item.stock"></Item>
+            </v-flex>
+        </v-layout>
+    </v-container>
 </template>
 
 <script>

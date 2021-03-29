@@ -4,9 +4,9 @@
         {{ title }}
     </v-card-title>
     <v-img
-        :lazy-src=image
+        :lazy-src="require(`~/static/image/${image}`)"
         :height="550"
-        :src=image
+        :src="require(`~/static/image/${image}`)"
     ></v-img>
     <v-card-text>
         <p>

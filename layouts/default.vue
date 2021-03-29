@@ -58,11 +58,6 @@ export default {
           icon: 'mdi-apps',
           title: 'Golf wear',
           to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Example',
-          to: '/inspire'
         }
       ],
       miniVariant: false,

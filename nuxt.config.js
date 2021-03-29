@@ -5,6 +5,9 @@ export default {
   ssr: false,
   target: 'static',
   telemetry: false,
+  router: {
+    base: '/golfware/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - golfware',

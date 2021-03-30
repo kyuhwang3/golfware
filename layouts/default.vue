@@ -12,6 +12,7 @@
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
+          @click.stop="filterItem(item.title)"
           router
           exact
         >
@@ -28,9 +29,11 @@
       :clipped-left="clipped"
       fixed
       app
+      clipped
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
+      <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -47,6 +50,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters, mapMutations } from 'vuex';
 export default {
   data () {
     return {
@@ -55,15 +59,34 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Golf wear',
-          to: '/'
+          icon: 'mdi-view-dashboard',
+          title: 'All',
+          to: '#all',
+        },
+        {
+          icon: 'mdi-view-dashboard',
+          title: 'T-Shirt',
+          to: '#tshirt',
+        },
+        {
+          icon: 'mdi-view-dashboard',
+          title: 'Pants',
+          to: '#pants',
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
       title: 'Golf wear'
+    }
+  },
+  methods: {
+    ...mapMutations({
+        setKeyword: 'item/setKeyword'
+    }),
+    filterItem(e) {
+      debugger;
+      this.setKeyword(e);
     }
   }
 }

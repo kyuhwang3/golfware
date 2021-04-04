@@ -4,7 +4,7 @@ export const state = () => ({
             "keyword": "T-Shirt",
             "title": "test Title 1",
             "info": "Golf T shirt 1",
-            "stock": 2,
+            "stock": 0,
             "img": "test.jpg",
         },
         {
